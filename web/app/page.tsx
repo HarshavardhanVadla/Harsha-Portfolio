@@ -255,9 +255,7 @@ export default function Page() {
           <p>© {new Date().getFullYear()} Harsha Vardhan. All rights reserved.</p>
           <div className="flex items-center gap-4">
             <a className="hover:underline" href="mailto:harshavardhanvadla15@gmail.com">Email</a>
-            <a className="hover:underline" href="mailto:harshavardhanvadla15@gmail.com">Email</a>
             <a className="hover:underline" href="https://github.com/HarshavardhanVadla">GitHub</a>
-            <a className="hover:underline" href="https://www.linkedin.com/in/harshavardhan-vadla">LinkedIn</a>
             <a className="hover:underline" href="https://www.linkedin.com/in/harshavardhan-vadla">LinkedIn</a>
           </div>
         </div>
