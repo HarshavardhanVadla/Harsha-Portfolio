@@ -59,7 +59,7 @@ export default function App() {
             <li><a className="hover:text-zinc-600" href="#contact">Contact</a></li>
           </ul>
           <a
-            href="/Harsha V--Node JS.pdf"
+            href="Harsha-Portfolio/Harsha V--Node JS.pdf"
             className="rounded-full border border-zinc-300 px-4 py-2 text-sm hover:bg-zinc-100"
           >
             Download Resume
@@ -206,7 +206,7 @@ export default function App() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p>© {new Date().getFullYear()} Harsha Vardhan. All rights reserved.</p>
           <div className="flex items-center gap-4">
-            <a className="hover:underline" href="mailto:harshavardhanvadla15@gmail.com">you@example.com</a>
+            <a className="hover:underline" href="mailto:harshavardhanvadla15@gmail.com">Email</a>
             <a className="hover:underline" href="https://github.com/HarshavardhanVadla">GitHub</a>
             <a className="hover:underline" href="https://www.linkedin.com/in/harshavardhan-vadla">LinkedIn</a>
           </div>
