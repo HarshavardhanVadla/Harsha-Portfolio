@@ -59,7 +59,7 @@ export default function App() {
             <li><a className="hover:text-zinc-600" href="#contact">Contact</a></li>
           </ul>
           <a
-            href="Harsha-Portfolio/Harsha V--Node JS.pdf"
+            href="/Harsha V--Node JS.pdf"
             className="rounded-full border border-zinc-300 px-4 py-2 text-sm hover:bg-zinc-100"
           >
             Download Resume
