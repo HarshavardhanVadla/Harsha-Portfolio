@@ -1,32 +1,23 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import Script from "next/script";
 
 export const metadata = {
   title: "Harsha Vardhan — Full-Stack Developer",
   description: "Node.js & React developer building modern web apps.",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="en" suppressHydrationWarning>
+      <head />
+      <Script id="theme-init" strategy="beforeInteractive">
+        {`(function(){try{
+          var s=localStorage.getItem('theme');
+          var d=s? s==='dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if(d) document.documentElement.classList.add('dark');
+        }catch(e){}})();`}
+      </Script>
+      <body className="bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100">
         {children}
       </body>
     </html>
