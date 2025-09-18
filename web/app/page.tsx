@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import ThemeToggle from "@/components/ThemeToggle";
 
 export default function Page() {
@@ -105,12 +106,23 @@ export default function Page() {
               <span>CI/CD</span>
             </div>
           </div>
-          <div className="relative">
-            <div className="aspect-square rounded-3xl border border-zinc-200 bg-white shadow-sm dark:border-zinc-800 dark:bg-zinc-900" />
-            <div className="absolute -bottom-4 -left-4 rounded-3xl border border-zinc-200 bg-white px-4 py-3 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
-              <p className="text-sm">Shipping small projects weekly 🚀</p>
-            </div>
+         <div className="relative">
+           {/* Image container keeps a perfect square and allows Image fill */}
+           <div className="relative aspect-square">
+             <Image
+               src="/hero.jpg"           // <-- your file in web/public/
+               alt="Harsha Vardhan"
+               fill                      // fills the square container
+               priority                  // loads immediately
+               sizes="(min-width: 768px) 36rem, 100vw"
+               className="rounded-3xl border border-zinc-200 object-cover shadow-sm dark:border-zinc-800"
+            />
           </div>
+
+          <div className="absolute -bottom-4 -left-4 rounded-3xl border border-zinc-200 bg-white px-4 py-3 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+            <p className="text-sm">Shipping small projects weekly 🚀</p>
+          </div>
+         </div>
         </div>
       </section>
 
