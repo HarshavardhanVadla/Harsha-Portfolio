@@ -1,11 +1,6 @@
 import "./globals.css";
 import Script from "next/script";
 
-export const metadata = {
-  title: "Harsha Vardhan — Full-Stack Developer",
-  description: "Node.js & React developer building modern web apps.",
-};
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
