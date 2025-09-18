@@ -10,7 +10,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
-      {/* Set the theme before hydration */}
       <Script id="theme-init" strategy="beforeInteractive">
         {`(function(){try{
           var s = localStorage.getItem('theme');
@@ -18,8 +17,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           document.documentElement.classList.toggle('dark', d);
         }catch(e){}})();`}
       </Script>
-      <body className="font-sans bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100
-                       [color-scheme:light] dark:[color-scheme:dark]">
+      <body className="font-sans bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100 [color-scheme:light] dark:[color-scheme:dark]">
         {children}
       </body>
     </html>
