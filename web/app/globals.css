@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Class-based theming only (no media query) */
+/* Class-based theming only */
 :root { color-scheme: light; }
 html.dark { color-scheme: dark; }
 
-/* Add other global styles below if needed (avoid body bg/text here) */
+/* Put any extra global styles below (avoid body bg/text here) */
