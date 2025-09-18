@@ -224,26 +224,12 @@ export default function Page() {
           <p className="mt-2 text-zinc-600 text-sm dark:text-zinc-300">
             Have an opportunity or just want to say hi? Drop a message.
           </p>
-          <form className="mt-6 grid md:grid-cols-2 gap-4">
-            <input
-              className="rounded-2xl border border-zinc-300 px-4 py-2 dark:border-zinc-700 dark:bg-zinc-900"
-              placeholder="Your name"
-            />
-            <input
-              className="rounded-2xl border border-zinc-300 px-4 py-2 dark:border-zinc-700 dark:bg-zinc-900"
-              placeholder="Email"
-            />
-            <textarea
-              className="md:col-span-2 min-h-[120px] rounded-2xl border border-zinc-300 px-4 py-2 dark:border-zinc-700 dark:bg-zinc-900"
-              placeholder="Message"
-            />
+          <form action="https://formspree.io/f/xkgvdwer" method="POST" className="mt-6 grid md:grid-cols-2 gap-4">
+            <input name="name" required className="rounded-2xl border border-zinc-300 px-4 py-2 dark:border-zinc-700 dark:bg-zinc-900" placeholder="Your name" />
+            <input type="email" name="_replyto" required className="rounded-2xl border border-zinc-300 px-4 py-2 dark:border-zinc-700 dark:bg-zinc-900" placeholder="Email" />
+            <textarea name="message" required className="md:col-span-2 min-h-[120px] rounded-2xl border border-zinc-300 px-4 py-2 dark:border-zinc-700 dark:bg-zinc-900" placeholder="Message" />
             <div className="md:col-span-2">
-              <button
-                type="button"
-                className="rounded-2xl px-5 py-2.5 bg-zinc-900 text-white hover:bg-zinc-800 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-200"
-              >
-                Send
-              </button>
+              <button className="rounded-2xl px-5 py-2.5 bg-zinc-900 text-white hover:bg-zinc-800 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-200">Send</button>
             </div>
           </form>
         </div>
